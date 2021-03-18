@@ -59,7 +59,7 @@ jobs:
       run: |
         source "${GITHUB_WORKSPACE}/build/${{matrix.target}}/settings.ini"
         echo "Modelfile=${{matrix.target}}" >> $GITHUB_ENV
-        echo "CanKu=${GITURL#*${Author}/}" >> $GITHUB_ENV
+        echo "CangKu=${GITURL#*${Author}/}" >> $GITHUB_ENV
         echo "REPO_URL=${REPO_URL}" >> $GITHUB_ENV
         echo "REPO_BRANCH=${REPO_BRANCH}" >> $GITHUB_ENV
         echo "CONFIG_FILE=${CONFIG_FILE}" >> $GITHUB_ENV
@@ -80,7 +80,7 @@ jobs:
       run: |
         if [[ "${SERVERCHAN_SCKEY}" == "true" ]]; then
           curl -k --data chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" --data "text=🎉 主人：
-                  您正在使用【${{matrix.target}}】文件夹编译固件中(${CanKu}仓库的#${Run_number}号),请耐心等待...... 😋" "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage"
+                  您正在使用【${{matrix.target}}】文件夹编译固件中(${CangKu}仓库的#${Run_number}号),请耐心等待...... 😋" "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage"
         fi
     
     - name: 设置编译环境
