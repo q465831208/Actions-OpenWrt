@@ -79,7 +79,7 @@ jobs:
     - name: 电报机器人信息通知
       run: |
         if [[ "${SERVERCHAN_SCKEY}" == "true" ]]; then
-          curl http://www.pushplus.plus/send/9975e7a73cda4f12a55dc6cb84f98b99?title=XXXcontent=XXX
+          curl http://www.pushplus.plus/send/9975e7a73cda4f12a55dc6cb84f98b99?title=你没找到你要编译content=你没找到你要编译的机型就使用各源码的公共文件夹来编译就可以了
         fi
     
     - name: 设置编译环境
