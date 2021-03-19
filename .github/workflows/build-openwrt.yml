@@ -79,7 +79,10 @@ jobs:
     - name: 电报机器人信息通知
       run: |
         if [[ "${SERVERCHAN_SCKEY}" == "true" ]]; then
-          curl http://www.pushplus.plus/send?9975e7a73cda4f12a55dc6cb84f98b99&XXX&XXX&html
+          token="9975e7a73cda4f12a55dc6cb84f98b99"
+          title="XXX"
+          content="XXX"
+          curl http://www.pushplus.plus/send?token=${token}&title=${title}&content=${content}&template=html
         fi
     
     - name: 设置编译环境
