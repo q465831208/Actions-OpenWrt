@@ -17,6 +17,7 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/M
 # 设置密码为空（安装固件时无需密码登陆，然后自己修改想要的密码）
 sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
 
+# 自定义机型跟内核
 echo "-b s905x3_s905x_s905d -k 5.4.105" > N1NEIHE
 
 # 增加带WiFi驱动，emmc写入和NTFS格式优盘挂载
