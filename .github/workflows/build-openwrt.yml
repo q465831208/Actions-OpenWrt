@@ -83,7 +83,7 @@ jobs:
           token = '9975e7a73cda4f12a55dc6cb84f98b99'
           title= '标题'
           content ='内容'
-          url = 'http://www.pushplus.plus/send?token='+token+'&title='+title+'&content='+content
+          curl = 'http://www.pushplus.plus/send?token='+token+'&title='+title+'&content='+content
           requests.get(url)
         fi
     
