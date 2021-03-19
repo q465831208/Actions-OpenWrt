@@ -79,8 +79,8 @@ jobs:
     - name: 电报机器人信息通知
       run: |
         if [[ "${SERVERCHAN_SCKEY}" == "true" ]]; then
-          token="9975e7a73cda4f12a55dc6cb84f98b99"
-          curl http://www.pushplus.plus/send/${token}?content=您使用文件夹编译的固件顺利编译完成了
+          curl -k --data chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" --data "text=🎉 主人：
+          您正在使用【${{matrix.target}}】文件夹编译固件中(${CangKu}仓库的#${Run_number}号),请耐心等待...... 😋" "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage"
         fi
     
     - name: 设置编译环境
