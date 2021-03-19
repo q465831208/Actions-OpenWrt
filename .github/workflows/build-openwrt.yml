@@ -181,6 +181,7 @@ jobs:
         source "${PATH1}"/common.sh && Diy_chajian
         make defconfig
         source "${PATH1}"/common.sh && Diy_adgu
+        sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0/${MIMI}/g' package/lean/default-settings/files/zzz-default-settings
         if [ "${REGULAR_UPDATE}" == "true" ]; then
           source "${PATH1}/upgrade.sh" && Diy_Part2
         fi
