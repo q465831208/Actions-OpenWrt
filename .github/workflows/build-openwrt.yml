@@ -80,7 +80,7 @@ jobs:
       run: |
         if [[ "${SERVERCHAN_SCKEY}" == "true" ]]; then
           token="9975e7a73cda4f12a55dc6cb84f98b99"
-          curl http://www.pushplus.plus/send/${token}?content=您使用【${{matrix.target}}】文件夹编译的[${{ env.NAME2 }}-${{ env.NAME1 }}]固件(${CangKu}仓库的#${Run_number}号)顺利编译完成了！💐
+          curl http://www.pushplus.plus/send/${token}?content="您使用【${{matrix.target}}】文件夹编译的[${{ env.NAME2 }}-${{ env.NAME1 }}]固件(${CangKu}仓库的#${Run_number}号)顺利编译完成了！💐"
         fi
     
     - name: 设置编译环境
