@@ -26,6 +26,7 @@ env:
   Author: ${{github.actor}}
   Run_number: ${{github.run_number}}
   Run_workflow: ${{github.workflow}}
+  MIMA: ${{MIMA}}
   TZ: Asia/Shanghai
 
 jobs:
